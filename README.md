@@ -16,15 +16,23 @@
 
 需要支持 `SKILL.md` 技能格式、图片输入，并且有图片生成或编辑工具的 AI 助手。Skill 是供助手执行的工作说明，不包含图像模型、API 密钥或独立上传网页。GitHub 负责分发文件，不会直接替访客生图；生成权限、费用和速度由所用平台决定，结果会随模型变化。
 
-## 安装到 Codex
+## 一句话安装到 Codex
 
-下载本页的 [完整安装包](photo-to-naive-illustration-github.zip) 并解压（不要使用 GitHub 的 Code → Download ZIP 代替安装包），把 **`skills/photo-to-naive-illustration` 整个文件夹** 复制到个人技能目录：
+把下面这句话发给 Codex 即可：
 
 ```text
-~/.codex/skills/photo-to-naive-illustration/
+帮我安装这个 Skill：https://github.com/YiShne/photo-to-naive-illustration
 ```
 
-若你设置了 `CODEX_HOME`，则放到 `$CODEX_HOME/skills/photo-to-naive-illustration/`。保留 `assets`、`references` 和 `agents` 子目录，不能只复制 `SKILL.md`。安装后开启新对话，让助手重新发现技能。
+仓库根目录就是完整 Skill，包含 `SKILL.md`、`prompt-recipes.md` 和三张参考图。Codex 可使用内置 skill-installer 直接从 GitHub 安装，无需手动下载或解压。安装后下一轮对话即可使用。
+
+给安装助手的说明：本仓库 Skill 路径为 `.`，安装名称为 `photo-to-naive-illustration`。使用内置安装器时传入：
+
+```text
+--repo YiShne/photo-to-naive-illustration --path . --name photo-to-naive-illustration
+```
+
+也保留了 [完整 ZIP 安装包](photo-to-naive-illustration-github.zip)，供需要手动复制文件的使用者选择。
 
 ## 使用方式
 
@@ -42,11 +50,11 @@
 ## 包含什么
 
 ```text
-skills/photo-to-naive-illustration/
-├── SKILL.md                      # 触发条件、风格规则、执行与检查流程
-├── agents/openai.yaml            # 技能显示信息
-├── references/prompt-recipes.md  # 通用提示词和场景处理范例
-└── assets/                       # 三张生成的风格参考插画
+SKILL.md              # 触发条件、风格规则、执行与检查流程
+prompt-recipes.md     # 通用提示词和场景处理范例
+iced-glass.png        # 风格参考：冰水玻璃杯
+flower-balloon.png    # 风格参考：笑脸花朵气球
+hanging-egg.png       # 风格参考：晾煎蛋
 ```
 
 其他支持 Agent Skills 的工具也可以读取该文件夹；具体技能安装位置和生图能力以其宿主环境为准。没有生图工具时，助手应明确说明，并提供可用于生图的提示词。

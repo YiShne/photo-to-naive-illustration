@@ -13,7 +13,7 @@ Inspect the uploaded photo before composing the prompt. When a local file is not
 
 Keep the subject recognizable through silhouette, hairstyle, clothing, pose and key props rather than photographic detail. Preserve the number of main people and the important interaction. For still life, preserve what makes the object or arrangement distinctive. Do not invent characters or faces on inanimate objects; retain faces that already exist, such as a smile printed on a balloon.
 
-The user may authorize simplification and proportion changes. In this style those are defaults: remove clutter, secondary buildings, cables, repeated small objects, reflections, folds and fine texture as needed. Enlarge the main subject or a meaningful plant/prop, shrink secondary elements and shift positions to improve composition. Preserve the scene's core meaning; do not add unrelated decoration.
+Simplification and proportion changes are built-in defaults of this skill; do not ask users to include permission for them in their prompt. Apply them automatically when useful for a clear illustration, while respecting explicit user constraints: remove clutter, secondary buildings, cables, repeated small objects, reflections, folds and fine texture as needed. Enlarge the main subject or a meaningful plant/prop, shrink secondary elements and shift positions to improve composition. Preserve the scene's core meaning; do not add unrelated decoration.
 
 ## Visual grammar
 
